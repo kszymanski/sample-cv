@@ -12,10 +12,14 @@
     flex: 0 0 400px;
     max-width: 400px;
     background-color: #1B4DA1;
-    & > .rail {
-      margin-top: 300px;
+    position: relative;
+    & > div {
+      margin-top: 150px;
       width: 400px;
       z-index: 1;
+      .ui.sticky{
+        z-index: 1;
+      }
     }
     .container{
       width: 100%;
