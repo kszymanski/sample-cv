@@ -1,93 +1,91 @@
-import React, { Component } from 'react';
-import { Rail, Sticky, Container } from 'semantic-ui-react';
+import React, { Component } from "react";
+import { Container, Divider, Sticky } from "semantic-ui-react";
+import Timeline from './blocks/timeline';
+import PersonalDetails from './blocks/personal-details';
+import SkillsContainer from './components/skills-container';
 
-import './App.scss';
+import "./App.scss";
 
-import DynamicHeader from './headers/DynamicHeader';
+import DynamicHeader from "./headers/DynamicHeader";
 
 class App extends Component {
-  state = {}
+  state = {};
 
   handleContextRef = contextRef => {
     console.log(contextRef);
     this.setState({ contextRef });
-  }
-  
+  };
+
   render() {
-    const { contextRef } = this.state
+    const { contextRef } = this.state;
     return (
-      <div className='app-container'>
+      <div className="app-container">
         <DynamicHeader />
-        <div className='cv-container'>
-          <aside >
+        <div className="cv-container">
+          <aside>
             <div>
-                <Sticky context={contextRef} pushing offset={150}>
-                    <Container text>
-                      <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-                    </Container>
-                    <Container text>
-                      <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-                    </Container>
-                    <Container text>
-                      <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-                    </Container>
-                    <Container text>
-                      <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-                    </Container>
-                    <Container text>
-                      <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-                    </Container>
-                </Sticky>
-</div>
+              <Sticky context={contextRef} pushing offset={150} >
+              <PersonalDetails />
+    <Divider />
+    <SkillsContainer title="Languages" skills={myDetails2.languages} />
+    <Divider />
+    <SkillsContainer
+      title="Programming Skills"
+      skills={myDetails2.programmingSkills}
+    />
+              </Sticky>
+            </div>
           </aside>
           <section ref={this.handleContextRef}>
             <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
+              <p>
+                Na co dzień Senior Web Developer, ale mówi o sobie Inżynier
+                Oprogramowania, bo liczy się dostarczanie wartości, nie ważne
+                czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future
+                Processing, po godzinach z pasją rozwijając swoje umiejętności w
+                hobbystycznych projektach. Frontend to dla niego chleb
+                powszedni, z Angularem idzie za pan brat od wersji 1.2 po
+                dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.
+              </p>
+            </Container>
+            <Divider />
+            <Container text>
+              <Timeline
+                title="Professional experience"
+                timeline={myDetails.professionalExperience}
+              />
+            </Container>
+            <Divider />
+            <Container text>
+              <Timeline
+                title="Education"
+                timeline={myDetails.educationHistory}
+              />
             </Container>
             <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
+              <p>
+                Na co dzień Senior Web Developer, ale mówi o sobie Inżynier
+                Oprogramowania, bo liczy się dostarczanie wartości, nie ważne
+                czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future
+                Processing, po godzinach z pasją rozwijając swoje umiejętności w
+                hobbystycznych projektach. Frontend to dla niego chleb
+                powszedni, z Angularem idzie za pan brat od wersji 1.2 po
+                dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.
+              </p>
             </Container>
+            <Divider />
             <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
+              <Timeline
+                title="Professional experience"
+                timeline={myDetails.professionalExperience}
+              />
             </Container>
+            <Divider />
             <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-            </Container>
-            <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-            </Container>
-            <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-            </Container>
-            <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-            </Container>
-            <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-            </Container>
-            <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-            </Container>
-            <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-            </Container>
-            <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-            </Container>
-            <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-            </Container>
-            <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-            </Container>
-            <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-            </Container>
-            <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
-            </Container>
-            <Container text>
-              <p>Na co dzień Senior Web Developer, ale mówi o sobie Inżynier Oprogramowania, bo liczy się dostarczanie wartości, nie ważne czy w grę wchodzi kod czy nie. Od 6 lat pracuje w firmie Future Processing, po godzinach z pasją rozwijając swoje umiejętności w hobbystycznych projektach. Frontend to dla niego chleb powszedni, z Angularem idzie za pan brat od wersji 1.2 po dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.</p>
+              <Timeline
+                title="Education"
+                timeline={myDetails.educationHistory}
+              />
             </Container>
           </section>
         </div>
@@ -97,3 +95,60 @@ class App extends Component {
 }
 
 export default App;
+const myDetails2 = {
+  languages: [
+    {
+      name: 'English',
+      rating: 4
+    },
+    {
+      name: 'German',
+      rating: 3
+    }
+  ],
+  programmingSkills: [
+    {
+      name: 'C#',
+      rating: 4
+    },
+    {
+      name: 'JavaScript',
+      rating: 3
+    },
+    {
+      name: 'OOP',
+      rating: 3
+    }
+  ]
+};
+const myDetails = {
+  professionalExperience: [
+    {
+      from: "2015",
+      to: "present",
+      description: "Senior .NET developer at Future Processing"
+    },
+    {
+      from: "2014",
+      to: "2015",
+      description: ".NET developer at Programex"
+    },
+    {
+      from: "2010",
+      to: "2014",
+      description: "Junior .NET developer at SoftPol"
+    }
+  ],
+  educationHistory: [
+    {
+      from: "2011",
+      to: "2014",
+      description: "Silesian University of Technology - Computer Science"
+    },
+    {
+      from: "2008",
+      to: "2011",
+      description: "High School A. Frycza-Modrzewskiego in Rybnik"
+    }
+  ]
+};
