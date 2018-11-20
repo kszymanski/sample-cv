@@ -4,6 +4,7 @@ import { fromEvent } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
 
 import './DynamicHeader.scss';
+import avatar from './kamilek.jpg';
 
 class DynamicHeader extends Component {
     state = {
@@ -48,7 +49,7 @@ class DynamicHeader extends Component {
                 <div className='cv-header' >
                     <aside>
                         <div style={nameDivStyle}>
-                            <Image src={`${process.env.PUBLIC_URL}/images/kamilek.jpg`} circular ></Image>
+                            <Image src={avatar} circular ></Image>
                             <h1 style={nameStyle}>Kamil Szymański</h1>
                         </div>
                     </aside>
