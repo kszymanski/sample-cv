@@ -1,4 +1,4 @@
-.app-container{
+.app-container {
   max-width: 1320px;
   margin: 0 auto;
 }
@@ -6,31 +6,42 @@
   min-height: 100vh;
   margin-top: 130px;
   display: flex;
-  @media (max-width: 1300px){
+  @media (max-width: 1300px) {
     display: block;
   }
   aside {
     flex: 0 0 400px;
     max-width: 400px;
-    background-color: #1B4DA1;
+    background-color: #1b4da1;
     position: relative;
+    color: white;
     & > div {
       margin-top: 150px;
       width: 400px;
       z-index: 1;
-      .ui.sticky{
+      .ui.sticky {
         z-index: 1;
+        padding: 0px 40px;
       }
     }
-    .container{
+    .container {
       width: 100%;
     }
-    @media (max-width: 1300px){
+    @media (max-width: 1300px) {
       display: none;
+    }
+    .ui.header {
+      color: white;
+    }
+    .ui.medium.header {
+      margin: 10px 0 5px 0 !important;
     }
   }
   section {
     flex: 1 0 auto;
     margin-top: 130px;
+    .ui.divider {
+      margin: 25px 0;
+    }
   }
 }

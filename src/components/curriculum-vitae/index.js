@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Grid } from "semantic-ui-react";
 import Sidebar from "../sidebar";
 import MainContent from "../main-content";
-import "./style.css";
+import "./style.scss";
 
 class CurriculumVitae extends Component {
   render = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { List, Header, Grid } from "semantic-ui-react";
-import "./style.css";
+import "./style.scss";
 
 const TimelineItem = ({ from, to, description }) => (
   <div>
