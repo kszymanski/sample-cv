@@ -1,14 +1,15 @@
-import React from 'react';
-import { List, Header } from 'semantic-ui-react';
-import TimelineItem from '../timeline-item';
-import PropTypes from 'prop-types';
+import React from "react";
+import { List, Header } from "semantic-ui-react";
+import TimelineItem from "../timeline-item";
+import PropTypes from "prop-types";
 
 const Timeline = ({ title, timeline }) => (
   <div>
     <Header>{title}</Header>
     <List>
-      {timeline.map(item => (
+      {timeline.map((item, index) => (
         <TimelineItem
+          key={index}
           from={item.from}
           to={item.to}
           description={item.description}
@@ -18,7 +19,7 @@ const Timeline = ({ title, timeline }) => (
   </div>
 );
 
-Timeline.PropTypes = {
+Timeline.propTypes = {
   timeline: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired
 };

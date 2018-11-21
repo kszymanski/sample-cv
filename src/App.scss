@@ -43,5 +43,15 @@
     .ui.divider {
       margin: 25px 0;
     }
+    .ui.card > .content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 3px 3px;
+    }
+    .ui.cards {
+      margin-top: 10px !important;
+    }
   }
 }

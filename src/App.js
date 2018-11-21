@@ -4,6 +4,7 @@ import Timeline from "./blocks/timeline";
 import ConsentNote from "./blocks/consent-note";
 import PersonalDetails from "./blocks/personal-details";
 import SkillsContainer from "./components/skills-container";
+import ProjectList from "./components/project-list";
 import Interests from "./blocks/interests";
 
 import "./App.scss";
@@ -14,7 +15,7 @@ class App extends Component {
   state = {};
 
   handleContextRef = contextRef => {
-    console.log(contextRef);
+    // console.log(contextRef);
     this.setState({ contextRef });
   };
 
@@ -68,6 +69,8 @@ class App extends Component {
                 timeline={myDetails.otherActivities}
               />
               <Divider />
+              <ProjectList githubAccountName={myDetails.githubAccountName} />
+              <Divider />
               <Interests />
               <Divider />
               <ConsentNote />
@@ -107,6 +110,7 @@ const myDetails2 = {
   ]
 };
 const myDetails = {
+  githubAccountName: "kszymanski",
   professionalExperience: [
     {
       from: "2015",

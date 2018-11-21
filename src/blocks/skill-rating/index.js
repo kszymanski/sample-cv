@@ -10,7 +10,7 @@ const SkillRating = ({ name, rating }) => (
   </div>
 );
 
-SkillRating.PropTypes = {
+SkillRating.propTypes = {
   name: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired
 };
