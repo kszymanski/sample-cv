@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Rating, Progress } from "semantic-ui-react";
+import { Progress } from "semantic-ui-react";
 import "./style.scss";
 
 const SkillRating = ({ name, rating }) => (

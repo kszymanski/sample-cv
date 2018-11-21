@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Divider, Sticky, List } from "semantic-ui-react";
+import { Container, Divider, Sticky } from "semantic-ui-react";
 import Timeline from "./blocks/timeline";
 import ConsentNote from "./blocks/consent-note";
 import PersonalDetails from "./blocks/personal-details";
