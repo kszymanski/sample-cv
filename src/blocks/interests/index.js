@@ -1,6 +1,5 @@
-import React from "react";
-import { Header, List } from "semantic-ui-react";
-import "./style.scss";
+import React from 'react';
+import { Header, List } from 'semantic-ui-react';
 
 const Interests = () => (
   <div>

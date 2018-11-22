@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { Header, Card } from "semantic-ui-react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import { Header, Card } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 
 class ProjectList extends Component {
   constructor(props) {
@@ -29,19 +29,21 @@ class ProjectList extends Component {
         <Header>
           My current projects (see my <a href={githubLink}>github</a>)
         </Header>
-        <Card.Group itemsPerRow={3}>
-          {projects
-            .filter(p => !p.fork)
-            .slice(0, 6)
-            .map(p => (
-              <Card
-                key={p.id}
-                href={p.html_url}
-                header={p.name}
-                meta={p.language}
-              />
-            ))}
-        </Card.Group>
+        {!!projects && projects.length && (
+          <Card.Group itemsPerRow={3}>
+            {projects
+              .filter(p => !p.fork)
+              .slice(0, 6)
+              .map(p => (
+                <Card
+                  key={p.id}
+                  href={p.html_url}
+                  header={p.name}
+                  meta={p.language}
+                />
+              ))}
+          </Card.Group>
+        )}
       </div>
     );
   };

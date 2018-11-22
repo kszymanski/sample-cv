@@ -2,6 +2,7 @@
   max-width: 1320px;
   margin: 0 auto;
 }
+
 .cv-container {
   min-height: 100vh;
   margin-top: 130px;
@@ -9,40 +10,62 @@
   @media (max-width: 1300px) {
     display: block;
   }
+
+  .ui .header {
+    margin: 10px 0 5px 0 !important;
+  }
+
   aside {
     flex: 0 0 400px;
     max-width: 400px;
     background-color: #1b4da1;
     position: relative;
     color: white;
+
     & > div {
       margin-top: 150px;
       width: 400px;
       z-index: 1;
+
       .ui.sticky {
         z-index: 1;
         padding: 0px 40px;
       }
     }
+
     .container {
       width: 100%;
     }
+
     @media (max-width: 1300px) {
       display: none;
     }
+
     .ui.header {
       color: white;
     }
+
     .ui.medium.header {
       margin: 10px 0 5px 0 !important;
     }
+
+    .skill-rating {
+      padding: 0 10px;
+    }
+
+    .personal-details {
+      text-align: center;
+    }
   }
+
   section {
     flex: 1 0 auto;
     margin-top: 130px;
+
     .ui.divider {
       margin: 25px 0;
     }
+
     .ui.card > .content {
       display: flex;
       justify-content: center;
@@ -50,8 +73,23 @@
       text-align: center;
       padding: 3px 3px;
     }
+
     .ui.cards {
       margin-top: 10px !important;
+    }
+
+    .description {
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    .ui.bulleted.list.interest-list {
+      margin-left: 100px;
+    }
+
+    .consent-note {
+      font-size: 12px;
+      margin-bottom: 20px;
     }
   }
 }

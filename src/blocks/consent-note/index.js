@@ -1,5 +1,4 @@
-import React from "react";
-import "./style.scss";
+import React from 'react';
 
 const ConsentNote = () => (
   <div className="consent-note">
